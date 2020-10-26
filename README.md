@@ -1,3 +1,16 @@
+## Bug fixing, while install the npx create-react-app resort,"error @svgr/webpack@5.4.0: The engine "node" is incompatible with this module. Expected version ">=10". Got "8.17.0"
+1.Use the NVM shift the node to the latest version;  
+```
+source ~/.bash_profile 
+nvm use node 
+```
+Now using node v14.14.0 (npm v6.14.8)  
+[使用nvm管理node与npm版本](https://juejin.im/post/6844903861157642247)   
+2. install the npx create-react-app resort 
+```
+npx create-react-app resort 
+```
+
 
 
 
