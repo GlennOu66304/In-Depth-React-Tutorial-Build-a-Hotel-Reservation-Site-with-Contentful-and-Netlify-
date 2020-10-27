@@ -6,11 +6,19 @@ nvm use node
 ```
 Now using node v14.14.0 (npm v6.14.8)  
 [使用nvm管理node与npm版本](https://juejin.im/post/6844903861157642247)   
-2. install the npx create-react-app resort 
+2.install the npx create-react-app resort 
 ```
 npx create-react-app resort 
 ```
-
+## move the a project into the Github:   
+1. Create a project, then git clone it into the local.    
+2. copy every file from the exiten project into the new project from github.   
+3. run the script below to begin the project:  
+```
+source ~/.bash_profile 
+nvm use node  
+npm start
+```
 
 
 
