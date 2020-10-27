@@ -19,6 +19,16 @@ source ~/.bash_profile
 nvm use node  
 npm start
 ```
+## Bugs The toogle could not display:
+You need to make sure that noth in icon import and use it in the button, the spelling of the FaAlignRight
+must be correct.   
+```
+// Navbar.js
+import {FaAlignRight} from 'react-icons/fa';
+<FaAlignRight className="nav-icon" /> 
+
+
+```
 
 
 
