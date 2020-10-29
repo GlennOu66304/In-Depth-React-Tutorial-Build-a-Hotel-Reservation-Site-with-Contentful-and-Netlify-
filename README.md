@@ -26,8 +26,6 @@ must be correct.
 // Navbar.js
 import {FaAlignRight} from 'react-icons/fa';
 <FaAlignRight className="nav-icon" /> 
-
-
 ```
 
 
