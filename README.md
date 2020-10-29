@@ -1,3 +1,25 @@
+## bug: Test"no such rooms could be found"
+You just need to add a non exsten word to the url, then you are able to see the effect,like
+```
+http://localhost:3000/rooms/hello
+```
+
+
+## Bugfixing:  Download error or resource isn't a valid image :
+Head to the the page where logo located ,then remove that code 
+[Download error or resource isn't a valid image](https://stackoverflow.com/questions/57762747/download-error-or-resource-isnt-a-valid-image?rq=1)   
+
+## Bug fixing: DevTools failed to load SourceMap: Could not load content for chrome-extension
+
+Go to the developer tool of the current page, then disable the "Enable javascript source maps" "Enable CSS source maps", then the bug will leave
+["Enable javascript source maps" "Enable CSS source maps"](https://stackoverflow.com/questions/61339968/devtools-failed-to-load-sourcemap-could-not-load-content-for-chrome-extension)  
+
+## Bug fixing: Greeting and name undifined:
+You need to head to the FeaturedRoom.js file to remove the greeting and name:  
+```
+ return <div> from FeaturedRooms </div>;
+```
+
 ## Bug fixing: Could not the Services css style in the home page:  
 You need to add the className="section-title" to apply the css style to the Title
 ```
