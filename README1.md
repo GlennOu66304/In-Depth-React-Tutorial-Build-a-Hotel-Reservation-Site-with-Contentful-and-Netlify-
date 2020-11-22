@@ -136,11 +136,6 @@ Split the Componet into two or multiple parts. You could Divide the big componet
 [Components and Props](https://reactjs.org/docs/components-and-props.html)
 
 [Function and Class Components](https://reactjs.org/docs/components-and-props.html)
-## Context
-
-Pass the data Through the tree
-
-[Context](https://reactjs.org/docs/context.html)  
 
 ## State and Lifecycle
 in order to write the state, you need to have a class componet, then define a state to the class component.
@@ -229,6 +224,13 @@ componentWillUnmount() {
 ```
 this.setState() schedule a UI call
 [Adding Lifecycle Methods to a Class](https://reactjs.org/docs/state-and-lifecycle.html)  
+
+## Context
+
+Pass the data Through the tree
+
+[Context](https://reactjs.org/docs/context.html)  
+
 
 
 
