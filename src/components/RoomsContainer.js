@@ -3,7 +3,7 @@ import RoomsFilter from './RoomFilter'
 import RoomsList from './RoomList'
 import {RoomConsumer} from '../context'
 
-export default function RoomContainer() {
+export default function RoomsContainer() {
     return (
         <div>
             Hello Froms Rooms Container

@@ -227,7 +227,40 @@ this.setState() schedule a UI call
 
 ## Context
 
-Pass the data Through the tree
+The data need to be used by many components at different nesting levels.  
+Sometimes, you could consider the Component Composition  
+
+To utilize the Context, you need to creat a Context project first: 
+```
+const MyContext = React.createContext(defaultValue);
+```
+Build Context.Provider   
+```
+<MyContext.Provider value={/* some value */}>
+```
+Create a Class.contextType
+```
+static contextType = MyContext;
+```
+Full code:
+```
+class MyClass extends React.Component {
+  static contextType = MyContext;
+  render() {
+    let value = this.context;
+    /* render something based on the value */
+  }
+}
+```
+Context.Consumer  
+```
+<MyContext.Consumer>
+  {value => /* render something based on the context value */}
+</MyContext.Consumer>
+```
+
+Main Reference:  
+[Context API](https://reactjs.org/docs/context.html)  
 
 [Context](https://reactjs.org/docs/context.html)  
 

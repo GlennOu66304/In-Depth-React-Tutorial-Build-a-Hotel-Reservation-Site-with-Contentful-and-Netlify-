@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from  '../components/Hero';
 import Banner from  '../components/Banner';
 import {Link} from 'react-router-dom';
-import RoomContainer from '../components/RoomContainer';
+import RoomsContainer from '../components/RoomsContainer';
 const Rooms = () => {
     return( 
     <>
@@ -13,8 +13,8 @@ const Rooms = () => {
             return home
         </Link>
     </Banner>
-        </Hero>;
-      <RoomContainer />
+        </Hero>
+      <RoomsContainer />
         </>
     );
 };
