@@ -53,7 +53,7 @@ function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 ```
-2. When the react dom start to render effect, the element will be regard as a props
+### 2. When the react dom start to render effect, the element will be regard as a props
 Props
 ```
 const element = <Welcome name="Sara" />;
@@ -78,6 +78,62 @@ ReactDOM.render(
 );
 ```
 
+## Composing Components
+
+You will put a componet (function or class) into other componet, and use the React Dom to render it.
+
+1.Base componet Welcome:
+```
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+2.Parent Componet App which has the Child Componet:  
+```
+function App() {
+  return (
+    <div>
+      <Welcome name="Sara" />
+      <Welcome name="Cahal" />
+      <Welcome name="Edite" />
+    </div>
+  );
+}
+```
+3.React DOM render it
+```
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
+```
+
+## React Element defines:
+There are three ways to define the effect in the React Dom
+1.element way
+```
+const element = <h1>Hello, world</h1>;
+ReactDOM.render(element, document.getElementById('root'));
+```
+2. element way (Has the componet)
+```
+const element = <Welcome name="Sara" />;
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+```
+3.Simply put the Compent
+```
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
+```
+## Extracting Components
+Split the Componet into two or multiple parts. You could Divide the big componet into the many small component, so you could reuse the components
+
+[Components and Props](https://reactjs.org/docs/components-and-props.html)
 
 [Function and Class Components](https://reactjs.org/docs/components-and-props.html)
 ## Context
