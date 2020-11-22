@@ -141,3 +141,94 @@ Split the Componet into two or multiple parts. You could Divide the big componet
 Pass the data Through the tree
 
 [Context](https://reactjs.org/docs/context.html)  
+
+## State and Lifecycle
+in order to write the state, you need to have a class componet, then define a state to the class component.
+### have a class componet,
+1.Create an ES6 class, with the same name, that extends React.Component.
+```
+class Clock extends React.Component {}
+```
+2.Add a single empty method to it called render().
+```
+class Clock extends React.Component {
+	render() {
+
+	}
+}
+```
+3.Move the body of the function into the render() method.
+```
+class Clock extends React.Component {
+	render() {
+<div>
+      <h1>Hello, world!</h1>
+      <h2>It is {props.date.toLocaleTimeString()}.</h2>
+    </div>
+	}
+}
+```
+4.Replace props with this.props in the render() body.
+```
+class Clock extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is {this.props.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }
+}
+```
+5.Delete the remaining empty function declaration.
+[State Via the Class Converting a Function to a Class](https://reactjs.org/docs/state-and-lifecycle.html)
+
+### then define a state to the class component.
+1.Replace this.props.date with this.state.date in the render() method:
+```
+<h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+```
+2.Add a class constructor that assigns the initial this.state:
+```
+constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+  }
+```
+3.React Dom Render the component
+```
+ReactDOM.render(
+  <Clock />,
+  document.getElementById('root')
+);
+```
+[Adding Local State to a Class](https://reactjs.org/docs/state-and-lifecycle.html)  
+
+## Adding Lifecycle Methods to a Class
+Begin the render is the “mounting” in React.  
+Clear the render is the “unmounting” in React.  
+
+A timer exmple explained, timer start the time running, timer stop, the time does not run
+
+componentDidMount() utilize to set up a timer, when the componenet render:
+```
+ componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
+  }
+```
+
+componentWillUnmount() clear the timer:
+```
+componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+```
+this.setState() schedule a UI call
+[Adding Lifecycle Methods to a Class](https://reactjs.org/docs/state-and-lifecycle.html)  
+
+
+
