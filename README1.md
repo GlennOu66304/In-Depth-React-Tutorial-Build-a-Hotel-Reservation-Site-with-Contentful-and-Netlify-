@@ -58,7 +58,7 @@ Props
 ```
 const element = <Welcome name="Sara" />;
 ```
-React Dom starts to generat the effect Welcome componeent first, that is <h1>Hello, {props.name}</h1>, then generate the name="sara", final you will get the final effect <h1>Hello, Sara</h1>. And apply it to the Dom node "root".
+React Dom starts to generat the effect Welcome componeent first, that is "<h1>Hello, {props.name}</h1>", then generate the name="sara", final you will get the final effect"<h1>Hello, Sara</h1>". And apply it to the Dom node "root".
 ```
 ReactDOM.render(
   element,
