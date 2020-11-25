@@ -53,6 +53,34 @@ function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 ```
+
+## React Props
+Props is kind of the Parmater, Like the Parmaer in the Javascript Function, it will be passed into the componet, then make effect on the DOM node, then update the change in the web.  
+
+To use this Props, you need to use this.props + attratube name to get the content:
+```
+this.props.brand
+```
+
+So the overall, 1.you need to creat a const, which is value you want to add to the componet, 
+```
+const myelement = <Car brand="Ford" />;
+```
+
+then use the props in the component to access it.
+```
+ return <h2>I am a {this.props.brand}!</h2>;
+```
+Full code:  
+```
+class Car extends React.Component {
+  render() {
+    return <h2>I am a {this.props.brand}!</h2>;
+  }
+}
+```
+
+[React Props](https://www.w3schools.com/react/react_props.asp)   
 ### 2. When the react dom start to render effect, the element will be regard as a props
 Props
 ```
